@@ -1,0 +1,988 @@
+﻿body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+  background-color: #808080;
+}
+
+.pull-left {
+  
+  float: left;
+   margin-left:1%;
+}
+
+.pull-left-main {
+  
+  float: left;
+  margin-left:1%;
+}
+.pull-right-main {
+  float: left;
+   margin-left:2%;
+  
+}
+.pull-right {
+    
+  float: right;
+  margin-top:8px;
+  margin-right:5px;
+  
+  
+}
+.pull-right-footer {
+  float: right;
+  
+  
+  
+}
+
+.alert {
+    position: relative;
+}
+
+.pull-left-New {
+  
+  float: left;
+   margin-left:1%;
+}
+
+.float_center {
+    
+  vertical-align:middle;
+  
+}
+
+.text-left-TextBox {
+  text-align: left;
+  width:500px;
+}
+
+.pull-right-Center {
+  float: right; 
+  text-align: right; 
+
+  
+}
+.pull-right-Center-Footer {
+  float: right; 
+  text-align: right; 
+ margin-right:10px;
+
+  
+}
+.RadTile:hover *,
+        .rtileHovered *,
+        .rtileHovered:hover,
+        .rtileContent:hover *,
+        .rtileHovered .rtileContent * {
+            cursor: pointer !important;
+        }
+
+.Rdb {
+   
+    margin-top:20px;
+    
+
+
+}
+
+.container-fluid-Main {
+  margin-right: 8%;
+  margin-left: 6%;
+  margin-top:2%;
+  background-color:white;   
+  *zoom: 1;
+}
+
+
+
+.container-fluid-footer {
+  margin-right: 8%;
+  margin-left: 6%;
+  margin-top:0%;
+  
+  background-color:#808080;
+  *zoom: 1;
+}
+
+.container-fluid {
+  margin-right: 6%;
+  margin-left: 5%; 
+  background-color:white;   
+  
+  
+  *zoom: 1;
+}
+
+.container-fluid-icons {
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-right: 6%;
+  margin-left: 5%; 
+  background-color:white;   
+   border-left:solid;
+     border-right:solid;
+   border-color:#666666;
+   border-width:1px;
+  
+  
+  *zoom: 1;
+}
+.container-fluid-Content {
+
+  margin-right: 6%;
+  margin-left: 5%; 
+  background-color:white;   
+  
+  
+  *zoom: 1;
+}
+
+.container-fluid-Body {
+  margin-right: 6%;
+  margin-left: 5%; 
+  background-color:white;   
+
+  *zoom: 1;
+}
+
+
+
+
+
+
+.table2 {
+  float:left
+   
+  
+}
+
+.underline{
+    text-decoration:underline;
+}
+
+
+.Postion-Absolute {
+   position:absolute;
+}
+
+.Postion-Relative {
+   position:relative;
+}
+
+
+
+.marginLeft {
+    margin-left:2%;
+}
+.marginLeft2 {
+    margin-left:2%;
+    margin-right:2%;
+}
+.marginRight2 {
+    
+}
+
+.marginRight {
+    margin-right:2%;
+}
+
+.headerLength{
+    width:500px;
+   
+}
+
+.highlight
+{
+  color:red;
+  
+}
+
+.txtDoc{
+    width:90%;
+    height:100px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin:5px 0;
+  font-family: inherit;
+  font-weight:normal;
+  line-height: 20px;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+
+
+.text-right {
+  text-align:right;
+}
+.text-left {
+  text-align:left;
+}
+
+
+ 
+.container-fluid_content {
+  margin-right: 5%;
+  margin-left: 5%;
+   margin-top: 2%;
+  background-color:white;   
+  *zoom: 1;
+}
+
+.Margin-Bottom {
+ margin-bottom:50px;
+}
+.row {
+   margin-left: -18px;
+   margin-right:-16px;
+  
+  
+   
+  *zoom: 1;
+  
+}
+
+.row4 {
+   margin-left: -20px;
+   margin-right:-16px;
+  
+  
+   
+  *zoom: 1;
+  
+}
+
+.rowFirst{
+      margin-left: -4px;
+   
+
+}
+.rowContent {
+   margin-left: -18px;
+   margin-right:-16px;
+   background-color:white;   
+  
+  
+  
+   
+  *zoom: 1;
+  
+}
+
+.rowContent2 {
+   margin-left: -18px;
+   margin-right:-16px;
+   background-color:white;   
+  
+  
+  
+   
+  *zoom: 1;
+  
+}
+
+.left-margin{
+    margin-left:5px;
+
+}
+.rowfooter {
+   margin-left: -20px;
+   margin-right:-20px;
+  
+  
+   
+  *zoom: 1;
+  
+}
+
+.borderleftright {
+    
+    
+     border-left:solid;
+     border-right:solid;
+   border-color:#666666;
+   border-width:1px;
+}
+
+.rowfooter {
+  
+   background-color:#808080;
+  
+  
+  *zoom: 1;
+}
+
+.row2 {
+  margin-left: -20px;
+   margin-right:-20px;
+   margin-top:-10px;
+   background-color:#808080;
+  
+  
+  
+  *zoom: 1;
+}
+row3 {
+   margin-left: -20px;
+   margin-right:-20px;
+   margin-top:10px;
+     
+   
+  *zoom: 1;
+  
+}
+
+.row4{
+     margin-left: -20px;
+   margin-right:-20px;
+   height:50px;
+}
+ 
+ .inline-rb input[type="radio"] {
+    width: auto;
+    margin-top:10px;
+}
+
+.inline-rb label {
+    display:inline;
+    margin-left:5px;
+  
+
+    font-size: 11.9px;
+}
+
+
+h6 {
+   margin-top:10px;
+  
+}
+h6Withoutmargin {
+   margin-top:-10px;
+}
+h6Withoutmargin2 {
+   margin-top:-20px;
+}
+h6New {
+   
+  font-size: 11.9px;
+  
+}
+
+h4 {
+    margin-bottom:0px;
+}
+hr {
+  margin: 1px 0;
+  border: 0;
+  border-top: 1px solid #808080;
+  border-bottom: 1px solid #808080;
+}
+ 
+ input[type=checkbox].css-checkbox,
+.css-checkbox input[type=checkbox] { margin-top:-10px;}
+/*-------------------------------------------------------------------------------------/*/
+/*color-profile Green*/
+/*-------------------------------------------------------------------------------------/*/
+   h3 {
+   padding-left:20px;
+   padding-top:10px;
+   padding-bottom:10px;
+   background-color: #7AC943;
+ 
+}
+     .live-tile-button
+    {
+        width:400px;
+        height:100px;
+        border: 0;
+         outline: 0;
+         text-wrap:normal;
+    }
+
+        .TileImg
+    {
+       height:50%;
+       width:50%;
+    }
+
+        .img-thumbnail {  
+  display: inline-block;  
+  height: auto;  
+  max-width: 100%;  
+  padding: 4px;  
+  line-height: 1.428571429;  
+  
+  
+  -webkit-transition: all 0.2s ease-in-out;  
+          transition: all 0.2s ease-in-out;  
+}  
+   
+ 
+    .flat-button {
+  display: inline-block;
+  margin: 0 5px;
+   padding-left:15px;
+   padding-right:15px;
+     padding-top:10px;
+   padding-bottom:10px;
+      font-weight:bold;
+  border: 0;
+ 
+  color: black;
+  cursor: pointer;
+  outline: 0;
+}
+
+ .flat-button-two {
+  display: inline-block;
+  margin-bottom:10px;
+   margin-left:10px;
+   padding-left:5px;
+   padding-right:5px;
+     padding-top:5px;
+   padding-bottom:5px;
+  font-weight:bold;
+  border: 0; 
+  color: black;
+  cursor: pointer;
+  outline: 0;
+}
+ .space-left-right {
+   margin-left:20px;
+   margin-right:20px;
+}
+
+  .space-left {
+   margin-left:40px;
+  
+}
+   .space-right-text {
+   margin-left:500px;
+  
+}
+
+ 
+.flat-button-cancel {
+  display:inline-block;
+  padding-left:15px;
+   padding-right:15px;
+   padding-top:10px;
+   padding-bottom:10px;
+   font-weight:bold;
+ 
+  margin: 0 5px;
+  border-width: 0.01px;
+  background: transparent;
+  color: black;
+  cursor: pointer;
+  outline: 0;
+ 
+}
+
+.dropdown {
+    width: 255px !important;
+   
+}
+
+
+
+.vertical {
+    border-right: 1px solid #ccc;
+    
+    
+   
+  
+}
+
+.v-divider{
+ margin-left:5px;
+ margin-right:5px;
+ width:1px;
+ height:100%;
+ border-left:1px solid gray;
+}
+.Horizontal {
+   
+    border-bottom: 1px solid #ccc;
+    width:55%;
+   
+    
+  
+}
+.HorizontalFull {
+   
+    border-bottom: 1px solid #ccc; 
+}
+.HorizontalFullTop {
+   
+    border-Top: 1px solid #ccc; 
+   
+}
+.HorizontalFullBase {
+   
+    border-top: 1px solid #ccc; 
+    margin-top: -12px;
+    margin-bottom:10px;
+    
+   
+   
+}
+
+.HorizontalFullBaseMed {
+   
+    border-top: 1px solid #ccc; 
+    margin-top: -12px;
+    margin-bottom:10px;
+    width:80%;
+   
+}
+
+
+.TableBorder {
+    margin-top:-12px;
+    border:1px solid #ccc;
+   
+   
+}
+.TableRow {
+  padding-top:20px;
+  display:block;
+
+}
+.TableRowDownSpacing {
+  padding-bottom:20px;
+  display:block;
+
+}
+
+.txtMultiline {
+  height:220px;
+  width:100%;
+
+}
+.lineHt {
+   line-height: 0.5;
+}
+.lineHtSmallHeader {
+   line-height: 2.5;
+}
+.DivBorder{
+    margin-top:-11px;
+    border: 1px solid #ccc; 
+
+}
+
+/*.RadListBox_Default .rlbGroup .rlbSelected
+    {
+        background: none repeat scroll 0 0 #7AC943 !important;
+    }
+
+.rlbGroup, .rlbList { overflow: auto !important; }
+    */
+.RadListBox span.rlbText 
+{ 
+    font-size: x-Small; 
+    font-family: Verdana, Arial, Helvetica,
+    sans-serif; 
+    color: Green; 
+    font-weight: bold;
+}
+
+
+.drpLong {
+    width:610px;
+   
+}
+
+
+
+.SmallText {
+ 
+ 
+  white-space:nowrap; 
+  vertical-align:top;
+  
+  
+
+}
+
+.Text-NoWrap {
+ 
+ 
+  white-space:nowrap; 
+ 
+  
+  
+
+}
+
+
+.label {
+    padding-left:20px;
+    vertical-align:bottom;
+}
+
+.pdf {
+    width:100%;
+    height:300px;
+}
+
+
+
+
+.textContainer { 
+     height: 50px; 
+    line-height: 50px;
+     vertical-align: middle;
+    display: inline-block;
+    
+}
+.textContainer2 { 
+    height: 10px; 
+    line-height: 15px;
+     vertical-align: middle;
+    display: inline-block;
+    padding-left:5px;
+}
+
+
+
+.space-right {
+    margin-right:19px;
+}
+
+
+.tdPadding {
+    padding-left:10px;
+  
+}
+.tdPadding-Two {
+    padding-left:30px;
+  
+}
+.tdPadding-Three {
+    padding-left:38px;
+  
+}
+.textBoxWidth {
+  
+    width:90%;
+    
+}
+.span6 {
+    margin: 0px; 
+   
+     
+    
+}
+.spanleft {
+    margin: 0px; 
+    width:360px; 
+     
+    
+}
+.spanright {
+    margin: 0px; 
+    width:360px; 
+     
+    
+}
+
+.textBoxWidthLong {
+  
+   
+    
+}
+
+
+
+.textBoxWidthExtraLong {
+  
+    width:710px;
+    
+}
+.textBoxWidthMed {
+  
+    width:280px;
+    
+    
+}
+.textBoxWidthSmall {
+  
+    width:100%;
+    
+    
+}
+
+
+
+.padLeft{
+ 
+    padding-left:50px;
+    
+}
+.padLeft2{
+ 
+    padding-left:150px;
+    
+}
+
+
+
+
+.padLeftLoginPage{
+ 
+      padding-left:10px;
+    
+}
+
+.TileTextAlignCenter {
+     text-align:center;
+}
+
+
+
+.btn{
+ width: 255px;
+}
+
+
+
+.RadTile.RadTile_Default.rtileWide.RadContentTemplateTile {
+  width: 100%;  
+  background: #7AC943;
+  text-align:center;
+  border-color:#7AC943;
+
+ 
+}
+
+.RadComboBox.RadComboBox_Default {
+   padding-top:-10px;
+}
+
+.TileText {
+    padding-top:12%;
+   
+}
+
+.TileVerticalMargin {
+    padding-top:10px;
+}
+
+.AdminTileText {
+    padding-top:20px;
+    color:#7AC943;
+    
+}
+
+
+.AlignInfoText {
+    margin-left:390px;
+    margin-top:-3px;
+    font-style: italic;
+}
+
+
+.BackGroundColor
+{
+  background-color:#7AC943;
+
+ 
+}
+
+a {
+    color:black;
+}
+
+.LinkForeColor
+{
+   margin-left:500px;
+   color:#006400;
+   text-decoration:underline;
+   font-style:italic;
+
+ 
+}
+
+
+
+.table-condensed>thead>tr>th, .table-condensed>tbody>tr>th, .table-condensed>tfoot>tr>th, .table-condensed>thead>tr>td, .table-condensed>tbody>tr>td, .table-condensed>tfoot>tr>td{
+    padding: 3px;
+}
+
+.lblFooterFontSize {
+    font-size:12px;
+}
+
+.BorderColor
+{
+ 
+  border-color:#7AC943;
+  color:#7AC943;
+}
+
+.thumbnail {
+margin: 0 auto;
+}
+
+.lb-sm {
+  font-size: 12px;
+  font-style:normal;
+  font-weight:bold;
+}
+
+.lb-md {
+  font-size: 16px;
+  font-weight:bold;
+}
+
+.lb-lg {
+  font-size: 20px;
+  font-weight:bold;
+  
+}
+
+
+
+label {
+    margin-right: -15px;
+   
+}
+
+.col-sm-2-1 {
+    width: 12%;
+    float: left;
+    min-height: 1px;
+    position:relative;
+    
+    
+    
+}
+ .rgHeader 
+    {
+        
+        font-size: 16px !important;
+        font-weight:bold !important;
+
+    }
+
+
+.col-sm-2-9 {
+    width: 8%;
+    float: left;
+    min-height: 1px;
+    position:relative;
+    min-width:45px;
+    
+    
+}
+.col-sm-2-4 {
+    width: 8%;
+    float: left;
+    min-height: 1px;
+    position:relative;
+    min-width:45px;
+    
+    
+}
+
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+
+.col-sm-2-2 {
+    width: 15%;
+    float: left;
+    min-height: 1px;
+    position:relative;
+    min-width:75px;
+    padding-left:15px;
+     padding-right:15px;
+    
+}
+
+.col-sm-2-4 {
+    width: 16%;
+    float: left;
+    min-height: 1px;
+    position:relative;
+    min-width:90px;
+    padding-left:15px;
+     padding-right:1px;
+     
+    
+}
+
+.col-sm-2-5 {
+    width: 15.5%;
+    float: left;
+    min-height: 1px;
+    position:relative;
+    min-width:85px;
+    padding-left:15px;
+     padding-right:15px;
+    
+}
+
+.Error-Message {
+    color:red;
+    
+}
+
+.Align-Submit-Button {
+  padding-right:21%;
+}
+
+
+
+@media (min-width: 768px) {
+  .form-horizontal .control-label {
+    padding-top: 7px;
+    margin-bottom: 0;
+    text-align: left;
+    
+    
+    
+  }
+
+  
+
+  
+}
+
+
+
+div.metro-tile:hover {
+    /*border: 3px solid #CC0000;*/
+    /*color:red;*/
+    color:white;
+    
+    -webkit-transform: scale(0.97) perspective(400px) rotateY(0deg) rotateX(0deg);
+    -moz-transform: scale(0.97) perspective(400px) rotateY(0deg) rotateX(0deg);
+    -ms-transform: scale(0.97) perspective(400px) rotateY(0deg) rotateX(0deg);
+    transform: scale(0.97) perspective(400px) rotateY(0deg) rotateX(0deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+

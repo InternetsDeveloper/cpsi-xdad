@@ -1,0 +1,7 @@
+C:\CPSI.VC.WEB\xdAdSelfService\TelerikWebApp3\bin\xdAdSelfServiceTool.dll
+C:\CPSI.VC.WEB\xdAdSelfService\TelerikWebApp3\bin\xdAdSelfServiceTool.pdb
+C:\CPSI.VC.WEB\xdAdSelfService\TelerikWebApp3\bin\Newtonsoft.Json.dll
+C:\CPSI.VC.WEB\xdAdSelfService\TelerikWebApp3\obj\Debug\xdAdSelfServiceTool.dll.licenses
+C:\CPSI.VC.WEB\xdAdSelfService\TelerikWebApp3\obj\Debug\xdAdSelfServiceTool.dll
+C:\CPSI.VC.WEB\xdAdSelfService\TelerikWebApp3\obj\Debug\xdAdSelfServiceTool.pdb
+C:\CPSI.VC.WEB\xdAdSelfService\TelerikWebApp3\obj\Debug\xdAdSelfService_Tool.csprojResolveAssemblyReference.cache

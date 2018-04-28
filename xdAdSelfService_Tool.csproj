@@ -1,0 +1,900 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2F6B4BCB-0CFD-4E85-A691-BA82034D1A3C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TelerikWebApp3</RootNamespace>
+    <AssemblyName>xdAdSelfServiceTool</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UpgradeBackupLocation />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CPSI_Crypto_LIB, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\CPSI_Crypto_LIB.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.Reporting, Version=8.2.14.1204, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Telerik.Reporting.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.Design, Version=2017.1.118.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2017.1.118.40\Telerik.Web.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.Spreadsheet, Version=2017.1.116.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2017.1.118.40\AdditionalLibraries\Bin40\Telerik.Web.Spreadsheet.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2017.1.118.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2017.1.118.40\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins, Version=2017.1.118.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2017.1.118.40\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Core, Version=2017.1.116.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2017.1.118.40\AdditionalLibraries\Bin40\Telerik.Windows.Documents.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Flow, Version=2017.1.116.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2017.1.118.40\AdditionalLibraries\Bin40\Telerik.Windows.Documents.Flow.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet, Version=2017.1.116.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2017.1.118.40\AdditionalLibraries\Bin40\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml, Version=2017.1.116.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2017.1.118.40\AdditionalLibraries\Bin40\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Zip, Version=2017.1.116.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2017.1.118.40\AdditionalLibraries\Bin40\Telerik.Windows.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="VCServiceClient, Version=1.0.1.7, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\VCServiceClient.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\InsertQ.ascx.cs">
+      <DependentUpon>InsertQ.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\InsertQ.ascx.designer.cs">
+      <DependentUpon>InsertQ.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageAcceptableUserPolicy.aspx.cs">
+      <DependentUpon>ManageAcceptableUserPolicy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageAcceptableUserPolicy.aspx.designer.cs">
+      <DependentUpon>ManageAcceptableUserPolicy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageInstanceConfiguration.aspx.cs">
+      <DependentUpon>ManageInstanceConfiguration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageInstanceConfiguration.aspx.designer.cs">
+      <DependentUpon>ManageInstanceConfiguration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageEmails.aspx.cs">
+      <DependentUpon>ManageEmails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageEmails.aspx.designer.cs">
+      <DependentUpon>ManageEmails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageThemeOptions.aspx.cs">
+      <DependentUpon>ManageThemeOptions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageThemeOptions.aspx.designer.cs">
+      <DependentUpon>ManageThemeOptions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Instance.aspx.cs">
+      <DependentUpon>Instance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Instance.aspx.designer.cs">
+      <DependentUpon>Instance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\District.aspx.cs">
+      <DependentUpon>District.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\District.aspx.designer.cs">
+      <DependentUpon>District.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AcessDenied.aspx.cs">
+      <DependentUpon>AcessDenied.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AcessDenied.aspx.designer.cs">
+      <DependentUpon>AcessDenied.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\NewContractorMessage.aspx.cs">
+      <DependentUpon>NewContractorMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\NewContractorMessage.aspx.designer.cs">
+      <DependentUpon>NewContractorMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EmailList.aspx.cs">
+      <DependentUpon>EmailList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EmailList.aspx.designer.cs">
+      <DependentUpon>EmailList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminHeader.ascx.cs">
+      <DependentUpon>AdminHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminHeader.ascx.designer.cs">
+      <DependentUpon>AdminHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Request_Locations.aspx.cs">
+      <DependentUpon>Request_Locations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Request_Locations.aspx.designer.cs">
+      <DependentUpon>Request_Locations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Request_Other_Changes_to_Job.aspx.cs">
+      <DependentUpon>Request_Other_Changes_to_Job.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Request_Other_Changes_to_Job.aspx.designer.cs">
+      <DependentUpon>Request_Other_Changes_to_Job.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SiteAdminDeny.Master.cs">
+      <DependentUpon>SiteAdminDeny.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteAdminDeny.Master.designer.cs">
+      <DependentUpon>SiteAdminDeny.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SiteAdmin.Master.cs">
+      <DependentUpon>SiteAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteAdmin.Master.designer.cs">
+      <DependentUpon>SiteAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UserName.aspx.cs">
+      <DependentUpon>UserName.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserName.aspx.designer.cs">
+      <DependentUpon>UserName.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Invalid.aspx.cs">
+      <DependentUpon>Invalid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Invalid.aspx.designer.cs">
+      <DependentUpon>Invalid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContractorEmailList.aspx.cs">
+      <DependentUpon>ContractorEmailList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContractorEmailList.aspx.designer.cs">
+      <DependentUpon>ContractorEmailList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContractorEmail.aspx.cs">
+      <DependentUpon>ContractorEmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContractorEmail.aspx.designer.cs">
+      <DependentUpon>ContractorEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contractor.aspx.cs">
+      <DependentUpon>Contractor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contractor.aspx.designer.cs">
+      <DependentUpon>Contractor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Complete_Registration.aspx.cs">
+      <DependentUpon>Complete_Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Complete_Registration.aspx.designer.cs">
+      <DependentUpon>Complete_Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InsertEmail.ascx.cs">
+      <DependentUpon>InsertEmail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InsertEmail.ascx.designer.cs">
+      <DependentUpon>InsertEmail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Insert.ascx.cs">
+      <DependentUpon>Insert.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Insert.ascx.designer.cs">
+      <DependentUpon>Insert.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PolicyConfirm.aspx.cs">
+      <DependentUpon>PolicyConfirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PolicyConfirm.aspx.designer.cs">
+      <DependentUpon>PolicyConfirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LogoConfirm.aspx.cs">
+      <DependentUpon>LogoConfirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogoConfirm.aspx.designer.cs">
+      <DependentUpon>LogoConfirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResetYourUserName.aspx.cs">
+      <DependentUpon>ResetYourUserName.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResetYourUserName.aspx.designer.cs">
+      <DependentUpon>ResetYourUserName.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reset_UserName_Password.aspx.cs">
+      <DependentUpon>Reset_UserName_Password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reset_UserName_Password.aspx.designer.cs">
+      <DependentUpon>Reset_UserName_Password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site3.Master.cs">
+      <DependentUpon>Site3.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site3.Master.designer.cs">
+      <DependentUpon>Site3.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site2.Master.cs">
+      <DependentUpon>Site2.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site2.Master.designer.cs">
+      <DependentUpon>Site2.Master</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateConfirm.aspx.cs">
+      <DependentUpon>TemplateConfirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TemplateConfirm.aspx.designer.cs">
+      <DependentUpon>TemplateConfirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageFooter.aspx.cs">
+      <DependentUpon>ManageFooter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageFooter.aspx.designer.cs">
+      <DependentUpon>ManageFooter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageHeader.aspx.cs">
+      <DependentUpon>ManageHeader.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageHeader.aspx.designer.cs">
+      <DependentUpon>ManageHeader.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageQuestions.aspx.cs">
+      <DependentUpon>ManageQuestions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageQuestions.aspx.designer.cs">
+      <DependentUpon>ManageQuestions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageSession.aspx.cs">
+      <DependentUpon>ManageSession.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageSession.aspx.designer.cs">
+      <DependentUpon>ManageSession.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SelectUserType.aspx.cs">
+      <DependentUpon>SelectUserType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SelectUserType.aspx.designer.cs">
+      <DependentUpon>SelectUserType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Template.aspx.cs">
+      <DependentUpon>Template.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Template.aspx.designer.cs">
+      <DependentUpon>Template.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FirstTimeParent_Screen_1.aspx.cs">
+      <DependentUpon>FirstTimeParent_Screen_1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FirstTimeParent_Screen_1.aspx.designer.cs">
+      <DependentUpon>FirstTimeParent_Screen_1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FirstTimeParent_Screen_2.aspx.cs">
+      <DependentUpon>FirstTimeParent_Screen_2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FirstTimeParent_Screen_2.aspx.designer.cs">
+      <DependentUpon>FirstTimeParent_Screen_2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FirstTimeParent_Screen_3.aspx.cs">
+      <DependentUpon>FirstTimeParent_Screen_3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FirstTimeParent_Screen_3.aspx.designer.cs">
+      <DependentUpon>FirstTimeParent_Screen_3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage_Contractor_Requests_Deny.aspx.cs">
+      <DependentUpon>Manage_Contractor_Requests_Deny.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage_Contractor_Requests_Deny.aspx.designer.cs">
+      <DependentUpon>Manage_Contractor_Requests_Deny.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage_Contractor_Requests_2.aspx.cs">
+      <DependentUpon>Manage_Contractor_Requests_2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage_Contractor_Requests_2.aspx.designer.cs">
+      <DependentUpon>Manage_Contractor_Requests_2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FirstTimeUserContractor_Screen_6.aspx.cs">
+      <DependentUpon>FirstTimeUserContractor_Screen_6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FirstTimeUserContractor_Screen_6.aspx.designer.cs">
+      <DependentUpon>FirstTimeUserContractor_Screen_6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FirstTimeUserContractor_Screen_5.aspx.cs">
+      <DependentUpon>FirstTimeUserContractor_Screen_5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FirstTimeUserContractor_Screen_5.aspx.designer.cs">
+      <DependentUpon>FirstTimeUserContractor_Screen_5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FirstTimeUserContractor_Screen_3.aspx.cs">
+      <DependentUpon>FirstTimeUserContractor_Screen_3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FirstTimeUserContractor_Screen_3.aspx.designer.cs">
+      <DependentUpon>FirstTimeUserContractor_Screen_3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FirstTimeUserContractor_Screen_2.aspx.cs">
+      <DependentUpon>FirstTimeUserContractor_Screen_2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FirstTimeUserContractor_Screen_2.aspx.designer.cs">
+      <DependentUpon>FirstTimeUserContractor_Screen_2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FirstTimeUserContractor_Screen_1.aspx.cs">
+      <DependentUpon>FirstTimeUserContractor_Screen_1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FirstTimeUserContractor_Screen_1.aspx.designer.cs">
+      <DependentUpon>FirstTimeUserContractor_Screen_1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FirstTimeUserContractor_Screen_4.aspx.cs">
+      <DependentUpon>FirstTimeUserContractor_Screen_4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FirstTimeUserContractor_Screen_4.aspx.designer.cs">
+      <DependentUpon>FirstTimeUserContractor_Screen_4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage_Contractor_Requests_1.aspx.cs">
+      <DependentUpon>Manage_Contractor_Requests_1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage_Contractor_Requests_1.aspx.designer.cs">
+      <DependentUpon>Manage_Contractor_Requests_1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResetPassword_Employee.aspx.cs">
+      <DependentUpon>ResetPassword_Employee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResetPassword_Employee.aspx.designer.cs">
+      <DependentUpon>ResetPassword_Employee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResetPassword_Staff.aspx.cs">
+      <DependentUpon>ResetPassword_Staff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResetPassword_Staff.aspx.designer.cs">
+      <DependentUpon>ResetPassword_Staff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResetPassword_Contractor.aspx.cs">
+      <DependentUpon>ResetPassword_Contractor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResetPassword_Contractor.aspx.designer.cs">
+      <DependentUpon>ResetPassword_Contractor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResetPassword_Parent.aspx.cs">
+      <DependentUpon>ResetPassword_Parent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResetPassword_Parent.aspx.designer.cs">
+      <DependentUpon>ResetPassword_Parent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Returning_Parent.aspx.cs">
+      <DependentUpon>Returning_Parent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Returning_Parent.aspx.designer.cs">
+      <DependentUpon>Returning_Parent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UploadSchoolLogo.aspx.cs">
+      <DependentUpon>UploadSchoolLogo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UploadSchoolLogo.aspx.designer.cs">
+      <DependentUpon>UploadSchoolLogo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UploadLogo.aspx.cs">
+      <DependentUpon>UploadLogo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UploadLogo.aspx.designer.cs">
+      <DependentUpon>UploadLogo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UpLoadPolicy.aspx.cs">
+      <DependentUpon>UpLoadPolicy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UpLoadPolicy.aspx.designer.cs">
+      <DependentUpon>UpLoadPolicy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResetYourPassword4.aspx.cs">
+      <DependentUpon>ResetYourPassword4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResetYourPassword4.aspx.designer.cs">
+      <DependentUpon>ResetYourPassword4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResetYourPassword3.aspx.cs">
+      <DependentUpon>ResetYourPassword3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResetYourPassword3.aspx.designer.cs">
+      <DependentUpon>ResetYourPassword3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResetYourPassword2.aspx.cs">
+      <DependentUpon>ResetYourPassword2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResetYourPassword2.aspx.designer.cs">
+      <DependentUpon>ResetYourPassword2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResetYourPassword.aspx.cs">
+      <DependentUpon>ResetYourPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResetYourPassword.aspx.designer.cs">
+      <DependentUpon>ResetYourPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeSecurityQuestions.aspx.cs">
+      <DependentUpon>ChangeSecurityQuestions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangeSecurityQuestions.aspx.designer.cs">
+      <DependentUpon>ChangeSecurityQuestions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login_2.aspx.cs">
+      <DependentUpon>Login_2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login_2.aspx.designer.cs">
+      <DependentUpon>Login_2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FirstTimeUser_Screen_1.aspx.cs">
+      <DependentUpon>FirstTimeUser_Screen_1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FirstTimeUser_Screen_1.aspx.designer.cs">
+      <DependentUpon>FirstTimeUser_Screen_1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FirstTimeUser_Screen_2.aspx.cs">
+      <DependentUpon>FirstTimeUser_Screen_2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FirstTimeUser_Screen_2.aspx.designer.cs">
+      <DependentUpon>FirstTimeUser_Screen_2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FirstTimeUser_Screen_3.aspx.cs">
+      <DependentUpon>FirstTimeUser_Screen_3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FirstTimeUser_Screen_3.aspx.designer.cs">
+      <DependentUpon>FirstTimeUser_Screen_3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Footer.ascx.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Footer.ascx.designer.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Header.ascx.designer.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainHeader.ascx.cs">
+      <DependentUpon>MainHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainHeader.ascx.designer.cs">
+      <DependentUpon>MainHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Returning_Student.aspx.cs">
+      <DependentUpon>Returning_Student.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Returning_Student.aspx.designer.cs">
+      <DependentUpon>Returning_Student.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Returning_User.aspx.cs">
+      <DependentUpon>Returning_User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Returning_User.aspx.designer.cs">
+      <DependentUpon>Returning_User.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Returning_Contractor.aspx.cs">
+      <DependentUpon>Returning_Contractor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Returning_Contractor.aspx.designer.cs">
+      <DependentUpon>Returning_Contractor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Util.cs" />
+    <Compile Include="View_Request_Status.aspx.cs">
+      <DependentUpon>View_Request_Status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View_Request_Status.aspx.designer.cs">
+      <DependentUpon>View_Request_Status.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm3.aspx.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm3.aspx.designer.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\InsertQ.ascx" />
+    <Content Include="Admin\ManageAcceptableUserPolicy.aspx" />
+    <Content Include="Admin\ManageInstanceConfiguration.aspx" />
+    <Content Include="Admin\ManageEmails.aspx" />
+    <Content Include="Admin\ManageThemeOptions.aspx" />
+    <Content Include="Admin\Instance.aspx" />
+    <Content Include="Admin\District.aspx" />
+    <Content Include="Admin\AcessDenied.aspx" />
+    <Content Include="Admin\NewContractorMessage.aspx" />
+    <Content Include="bin\Telerik.Web.Spreadsheet.dll" />
+    <Content Include="bin\Telerik.Windows.Documents.Core.dll" />
+    <Content Include="bin\Telerik.Windows.Documents.Flow.dll" />
+    <Content Include="bin\Telerik.Windows.Documents.Spreadsheet.dll" />
+    <Content Include="bin\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll" />
+    <Content Include="bootstrapold\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="bootstrapold\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="bootstrapold\bootstrap\js\npm.js" />
+    <Content Include="Admin\EmailList.aspx" />
+    <Content Include="AdminHeader.ascx" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\main.css" />
+    <Content Include="css\plugins.css" />
+    <Content Include="css\themes.css" />
+    <Content Include="img\CPSI-Logo-Black4.png" />
+    <Content Include="img\CPSI-Logo-Gray.png" />
+    <Content Include="img\favicon.png" />
+    <Content Include="img\HowItWorksGraphic32.png" />
+    <Content Include="js\app.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\pages\conReg.js" />
+    <Content Include="js\pages\login.js" />
+    <Content Include="js\pages\signup.js" />
+    <Content Include="js\plugins.js" />
+    <Content Include="js\vendor\bootstrap.min.js" />
+    <Content Include="js\vendor\jquery.min.js" />
+    <Content Include="js\vendor\modernizr.min.js" />
+    <Content Include="obj\Debug\xdAdSelfServiceTool.dll" />
+    <Content Include="obj\Debug\xdadselfservicetool.dll.licenses" />
+    <Content Include="obj\Debug\xdAdSelfServiceTool.pdb" />
+    <Content Include="obj\Debug\xdAdSelfService_Tool.csproj.FileListAbsolute.txt" />
+    <Content Include="Request_Locations.aspx" />
+    <Content Include="Request_Other_Changes_to_Job.aspx" />
+    <Content Include="SchoolLogo\logo.jpg" />
+    <Content Include="SchoolLogo\logo.png" />
+    <Content Include="uploadpolicy\BostonPublicSchools.htm" />
+    <Content Include="UserName.aspx" />
+    <Content Include="Invalid.aspx" />
+    <Content Include="ContractorEmailList.aspx" />
+    <Content Include="ContractorEmail.aspx" />
+    <Content Include="Contractor.aspx" />
+    <Content Include="bin\CPSI_Crypto_LIB.dll" />
+    <Content Include="Complete_Registration.aspx" />
+    <Content Include="InsertEmail.ascx" />
+    <Content Include="Insert.ascx" />
+    <Content Include="PolicyConfirm.aspx" />
+    <Content Include="LogoConfirm.aspx" />
+    <Content Include="ResetYourUserName.aspx" />
+    <Content Include="Reset_UserName_Password.aspx" />
+    <Content Include="TemplateConfirm.aspx" />
+    <Content Include="Logo\CPSILogo.png" />
+    <Content Include="Admin\ManageFooter.aspx" />
+    <Content Include="Admin\ManageHeader.aspx" />
+    <Content Include="Admin\ManageQuestions.aspx" />
+    <Content Include="Admin\ManageSession.aspx" />
+    <Content Include="Admin\SelectUserType.aspx" />
+    <Content Include="Admin\Template.aspx" />
+    <Content Include="bin\Telerik.Web.Design.dll" />
+    <Content Include="bin\Telerik.Web.UI.dll" />
+    <Content Include="bin\Telerik.Web.UI.Skins.dll" />
+    <Content Include="bin\Telerik.Windows.Zip.dll" />
+    <Content Include="bin\VCServiceClient.dll" />
+    <Content Include="bootstrapold\bootstrap\css\bootstrap-responsive.css" />
+    <Content Include="bootstrapold\bootstrap\css\bootstrap-responsive.min.css" />
+    <Content Include="bootstrapold\bootstrap\css\bootstrap.css" />
+    <Content Include="bootstrapold\bootstrap\css\bootstrap.min.css" />
+    <Content Include="bootstrapold\bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="bootstrapold\bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="bootstrapold\bootstrap\js\bootstrap.js" />
+    <Content Include="bootstrapold\bootstrap\js\bootstrap.min.js" />
+    <Content Include="bootstrapold\bootstrap\css\Site.css" />
+    <Content Include="ResetPassword_Employee.aspx" />
+    <Content Include="Admin\Default.aspx" />
+    <Content Include="App_Data\Theme\Theme.css" />
+    <Content Include="FirstTimeParent_Screen_1.aspx" />
+    <Content Include="FirstTimeParent_Screen_2.aspx" />
+    <Content Include="FirstTimeParent_Screen_3.aspx" />
+    <Content Include="img\Images\waiting.gif" />
+    <Content Include="Manage_Contractor_Requests_Deny.aspx" />
+    <Content Include="Manage_Contractor_Requests_2.aspx" />
+    <Content Include="FirstTimeUserContractor_Screen_6.aspx" />
+    <Content Include="FirstTimeUserContractor_Screen_5.aspx" />
+    <Content Include="FirstTimeUserContractor_Screen_3.aspx" />
+    <Content Include="FirstTimeUserContractor_Screen_2.aspx" />
+    <Content Include="FirstTimeUserContractor_Screen_1.aspx" />
+    <Content Include="FirstTimeUserContractor_Screen_4.aspx" />
+    <Content Include="Manage_Contractor_Requests_1.aspx" />
+    <Content Include="ResetPassword_Staff.aspx" />
+    <Content Include="ResetPassword_Contractor.aspx" />
+    <Content Include="ResetPassword_Parent.aspx" />
+    <Content Include="Returning_Parent.aspx" />
+    <Content Include="Theme\Theme.css" />
+    <Content Include="View_Request_Status.aspx" />
+    <Content Include="WebForm2.aspx" />
+    <Content Include="bootstrapold\bootstrap\config.json" />
+    <Content Include="bootstrapold\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="bootstrapold\bootstrap\css\bootstrap-theme.min.css.map" />
+    <Content Include="bootstrapold\bootstrap\css\bootstrap.css.map" />
+    <Content Include="bootstrapold\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="WebForm3.aspx" />
+    <None Include="css\fonts\_DS_Store" />
+    <None Include="css\_DS_Store" />
+    <None Include="fonts\Exo-Regular.otf" />
+    <None Include="fonts\_DS_Store" />
+    <None Include="img\_DS_Store" />
+    <None Include="js\pages\_DS_Store" />
+    <None Include="js\vendor\_DS_Store" />
+    <None Include="js\_DS_Store" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="SelfServiceSettings.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Test.aspx" />
+    <Content Include="Admin\UploadSchoolLogo.aspx" />
+    <Content Include="Admin\UploadLogo.aspx" />
+    <Content Include="Admin\UpLoadPolicy.aspx" />
+    <Content Include="js\uploadpolicy\BostonPublicSchools.htm" />
+    <Content Include="img\Images\changemypassword.png" />
+    <Content Include="img\Images\ChangeMySecretQuestions.png" />
+    <Content Include="img\Images\logo.png" />
+    <Content Include="img\Images\RequestStatus.png" />
+    <Content Include="ResetYourPassword4.aspx" />
+    <Content Include="ResetYourPassword3.aspx" />
+    <Content Include="ResetYourPassword2.aspx" />
+    <Content Include="ResetYourPassword.aspx" />
+    <Content Include="ResetPassword.aspx" />
+    <Content Include="ChangePassword.aspx" />
+    <Content Include="ChangeSecurityQuestions.aspx" />
+    <Content Include="Login_2.aspx" />
+    <Content Include="FirstTimeUser_Screen_1.aspx" />
+    <Content Include="FirstTimeUser_Screen_2.aspx" />
+    <Content Include="FirstTimeUser_Screen_3.aspx" />
+    <Content Include="Footer.ascx" />
+    <Content Include="Header.ascx" />
+    <Content Include="img\Images\CPSILogo.png" />
+    <Content Include="Default.aspx" />
+    <Content Include="MainHeader.ascx" />
+    <Content Include="Returning_Student.aspx" />
+    <Content Include="Returning_User.aspx" />
+    <Content Include="Returning_Contractor.aspx" />
+    <Content Include="WebForm1.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="web.config" />
+    <Content Include="Site1.Master" />
+    <Content Include="Test.pdf" />
+    <Content Include="Site2.Master" />
+    <Content Include="Site3.Master" />
+    <Content Include="SiteAdmin.Master" />
+    <Content Include="SiteAdminDeny.Master" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bootstrapold\bootstrap\fonts\" />
+    <Folder Include="css\fonts\fontawesome\" />
+    <Folder Include="css\fonts\glyphicons.filetypes.pro\" />
+    <Folder Include="css\fonts\glyphicons.halflings.pro\" />
+    <Folder Include="css\fonts\glyphicons.pro\" />
+    <Folder Include="css\fonts\glyphicons.social.pro\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="obj\Logo_temp\" />
+    <Folder Include="SchoolLogo_temp\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Import Project="$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49573</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:58836/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

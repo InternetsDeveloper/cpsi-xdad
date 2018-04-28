@@ -1,0 +1,70 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace TelerikWebApp3
+{
+    public partial class Returning_Contractor : System.Web.UI.Page
+    {
+        void showSchoolLogo()
+        {
+            string path = "";
+            string[] filePaths = Directory.GetFiles(Server.MapPath(@"~/SchoolLogo/"));
+            if (filePaths.Count() > 0)
+            {
+                path = @"~/SchoolLogo/" + Path.GetFileName(filePaths[0]);
+
+
+                string fileNameDest = Server.MapPath(path);
+                using (Bitmap imgb = new Bitmap(fileNameDest))
+                {
+
+                    var imageHeight = imgb.Height;
+                    var imageWidth = imgb.Width;
+                 //   img.Attributes.Add("src", path);
+                //    img.Attributes.Add("height", imageHeight.ToString());
+                //    img.Attributes.Add("width", imageWidth.ToString());
+                }
+            }
+        }
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!Page.IsPostBack)
+            {
+                showSchoolLogo();
+            }
+        }
+
+        protected void btnChangePassword_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ChangePassword.aspx");
+        }
+
+        protected void btnChangeQuestions_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ChangeSecurityQuestions.aspx");
+        }
+        protected void btnRequestStatus_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("View_Request_Status.aspx");
+        }
+        protected void btnAdditionalLocations_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Request_Locations.aspx");
+        }
+        protected void btnRequestOtherChanges_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Request_Other_Changes_to_Job.aspx");
+        }
+        protected void btnPersonalInformation_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Manage_Personal_Information.aspx");
+        }
+        
+    }
+}

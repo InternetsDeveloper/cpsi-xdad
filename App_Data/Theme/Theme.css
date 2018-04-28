@@ -1,0 +1,40 @@
+.border2 {
+   border:solid;
+   border-color:#330099;
+}
+.border {
+     border-bottom:solid;
+   border-color:#330099;
+}
+ 
+  h3 {
+   padding-left:20px;
+   padding-top:10px;
+   padding-bottom:10px;
+   background-color: #FFFF33;
+}
+ 
+.RadTile.RadTile_Default.rtileWide.RadContentTemplateTile   {
+  width: 100%;  
+  background: #FFFF33;
+  text-align:center;
+  border-color:#FFFF33;
+ 
+}
+ 
+.AdminTileText {
+    padding-top:20px;
+    color:#FFFF33;
+    
+}
+ 
+.BackGroundColor
+{
+  background-color:#FFFF33;
+}
+ 
+.BorderColor
+{
+  border-color:#FFFF33;
+  color:#FFFF33;
+}

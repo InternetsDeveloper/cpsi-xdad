@@ -1,0 +1,73 @@
+﻿<xdADSelfService Type="setting" Provider="database" Action="set">
+  <UserTypes>
+    <UserType ID="1" Checked="true" HasSubType="false">Student</UserType>
+    <UserType ID="2" Checked="false" HasSubType="false">Staff</UserType>
+    <UserType ID="3" Checked="true" HasSubType="true">
+      <SubType ID="31">Full Time Teacher Staff (Employee)</SubType>
+      <SubType ID="32">Part Time Teacher Staff (Employee)</SubType>
+      <SubType ID="33">Full Time Non-Teacher Staff (Employee)</SubType>
+      <SubType ID="34">Part Time Non-Teacher Staff (Employee)</SubType>
+      <SubType ID="35">Temporary Staff (Employee)</SubType>
+    </UserType>
+    <UserType ID="4" Checked="true" HasSubType="false">Contractor</UserType>
+  </UserTypes>
+  <SecretQuestions>
+    <SecretQuestion>What is your pet's name?</SecretQuestion>
+    <SecretQuestion>What is your favorite movie?</SecretQuestion>
+    <SecretQuestion>What is your car make?</SecretQuestion>
+    <SecretQuestion>What is your father's middle name?</SecretQuestion>
+    <SecretQuestion>What is your middle school's name?</SecretQuestion>
+    <SecretQuestion>What is your favorite food?</SecretQuestion>
+    <SecretQuestion>What is your mother's birth city?</SecretQuestion>
+  </SecretQuestions>
+  <PasswordSettings>
+    <PasswordOptions UserType="1">
+      <GeneralOptions>
+        <Option ID="1" Enabled="false">Enable "Reset Password" only after AUP is signed</Option>
+      </GeneralOptions>
+      <ActionOptions>
+        <Option ID="1" DisplayedText="Use account template" Default="true" Selected="true">Use account template</Option>
+        <Option ID="2" DisplayedText="Enter the password" Default="false" Selected="false">Enter the password</Option>
+        <Option ID="3" DisplayedText="Predefined passwords" Default="false" Selected="false">Predefined password</Option>
+      </ActionOptions>
+      <AccountOptions>
+        <Option ID="1" Enabled="false" Checked="false" Selected="true">User must change password at next logon</Option>
+        <Option ID="2" Enabled="false" Checked="false" Selected="false">User cannot change password</Option>
+        <Option ID="3" Enabled="false" Checked="false" Selected="false">Password never expires</Option>
+      </AccountOptions>
+      <PredefinedPasswords />
+    </PasswordOptions>
+    <PasswordOptions UserType="2">
+      <GeneralOptions>
+        <Option ID="1" Enabled="false">Enable "Reset Password" only after AUP is signed</Option>
+      </GeneralOptions>
+      <ActionOptions>
+        <Option ID="1" DisplayedText="Use account template" Default="true" Selected="true">Use account template</Option>
+        <Option ID="2" DisplayedText="Enter the password" Default="false" Selected="false">Enter the password</Option>
+        <Option ID="3" DisplayedText="Predefined passwords" Default="false" Selected="false">Predefined password</Option>
+      </ActionOptions>
+      <AccountOptions>
+        <Option ID="1" Enabled="false" Checked="false" Selected="false">User must change password at next logon</Option>
+        <Option ID="2" Enabled="false" Checked="false" Selected="false">User cannot change password</Option>
+        <Option ID="3" Enabled="false" Checked="false" Selected="false">Password never expires</Option>
+      </AccountOptions>
+      <PredefinedPasswords />
+    </PasswordOptions>
+    <PasswordOptions UserType="3">
+      <GeneralOptions>
+        <Option ID="1" Enabled="false">Enable "Reset Password" only after AUP is signed</Option>
+      </GeneralOptions>
+      <ActionOptions>
+        <Option ID="1" DisplayedText="Use account template" Default="true" Selected="true">Use account template</Option>
+        <Option ID="2" DisplayedText="Enter the password" Default="false" Selected="false">Enter the password</Option>
+        <Option ID="3" DisplayedText="Predefined passwords" Default="false" Selected="false">Predefined password</Option>
+      </ActionOptions>
+      <AccountOptions>
+        <Option ID="1" Enabled="false" Checked="false" Selected="false">User must change password at next logon</Option>
+        <Option ID="2" Enabled="false" Checked="false" Selected="false">User cannot change password</Option>
+        <Option ID="3" Enabled="false" Checked="false" Selected="false">Password never expires</Option>
+      </AccountOptions>
+      <PredefinedPasswords />
+    </PasswordOptions>
+  </PasswordSettings>
+</xdADSelfService>
